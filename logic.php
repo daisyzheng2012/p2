@@ -7,7 +7,7 @@
     /*
     *   Generate xkcd style password
     */
-    echo var_dump($_GET);
+    // echo var_dump($_GET);
     $number_of_words = 0;
     $errmsg = " ";
     $add_number = 0;

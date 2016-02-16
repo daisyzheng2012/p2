@@ -23,7 +23,7 @@
     <nav class="navbar navbar-inverse narbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/">Home</a>
+                <a class="navbar-brand" href="http://p1.jingjingzheng.me">Home</a>
             </div>
                 <!-- <ul class="nav navbar-nav">
                 <li class="active"><a href="#">About</a></li>
