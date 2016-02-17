@@ -1,9 +1,5 @@
 <?php
 
-    // Error reporting, and display errors on page
-    error_reporting(E_ALL);
-    ini_set('display_errors', 1);
-
     /*
     *   Generate xkcd style password
     */
@@ -19,9 +15,7 @@
         //number checkbox post-checking
         if (isset($_GET['add_number']) and ($_GET['add_number'] == 'Yes')) {
             $add_number = 1;
-            // echo ""$add_number;
         }
-        echo $add_number;
 
         //words number post-checking isset
         $pattern = '/[0-9]/';
@@ -32,22 +26,12 @@
         else{
             $number_of_words = 4;
             $errmsg = "Invalid number entered. Showing a default 4 word long paragraph.";
-            // echo $errmsg;
         }
 
         //special character checkbox post-checking
         if (isset($_GET['add_symbol']) and $_GET['add_symbol'] == 'Yes') {
             $add_symbol = 1;
         }
-
-        //words number post-checking
-        // if ($_GET['number_of_words'] == "") {
-        //     global $number_of_words = 4;
-        //     global $errmsg = "Invalid number entered. Showing a default 4 word long paragraph."
-        // }
-        // else {
-        //
-        // }
     }
 
     // generate words
@@ -64,20 +48,17 @@
             $results .= " ";
         }
         return $results;
-        // echo $contents;
     }
 
     // generate special character
     function generate_special_character() {
         $special_char = "{}[];:,./<>?_+~!@#";
-        echo $special_char[rand(0, strlen($special_char))];
         return $special_char[rand(0, strlen($special_char))];
     }
 
     // generate numbers
     function generate_number() {
         $numbers = "1234567890";
-        // echo mt_rand(0, 9);
         return mt_rand(0, 9);
     }
 
@@ -98,7 +79,6 @@
         }
 
         echo $gen_pwd;
-        // echo $errmsg;
     }
 
     function error_message() {

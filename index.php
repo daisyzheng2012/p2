@@ -1,3 +1,9 @@
+<?php
+    // Error reporting, and display errors on page
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +21,7 @@
     </style>
 
     <?php
-        require 'logic.php';
+        require('logic.php');
     ?>
 
 </head>
@@ -32,36 +38,54 @@
         </div>
     </nav>
 
-    <div class="container-fluid bg-1 text-center">
-        <h1>xkcd Password Generator</h1>
-
-        <p class='password'><?php xkcd_password_generator(); ?></p>
-
-        <form method="get" action="index.php">
-            <p class='options'>
-                <label for='number_of_words'># of Words</label>
-                <input maxlength="1" type='text' name='number_of_words' id='number_of_words' value='<?php $number_of_words ?>'> (Max 9)
-                <br>
-
-                <input type='checkbox' name='add_number' id='add_number' value='Yes'>
-                <label for='add_number'>Add a number</label>
-                <br>
-                <input type='checkbox' name='add_symbol' id='add_symbol' value='Yes'>
-                <label for='add_symbol'>Add a symbol</label>
-            </p>
-
-            <input type='submit' class='btn btn-default' value='Gimme Another'>
-            <div class='error'><?php error_message(); ?></div>
-        </form>
-        <p class='details'>
-            <a href='http://xkcd.com/936/'>xkcd password strength</a><br>
-
-            <a href='http://xkcd.com/936/'>
-                <img class='comic' src='http://imgs.xkcd.com/comics/password_strength.png' alt='xkcd style passwords'>
-            </a>
-            <br>
-        </p>
-
+    <div class="page-header">
+        <h1 class="text-center">xkcd Password Generator</h1>
     </div>
+    <div class="container-fluid bg-1 text-center">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <p class='password'><?php xkcd_password_generator(); ?></p>
+
+                <form role="form" method="get" action="index.php">
+                    <div class='panel panel-primary'>
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Options</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label for='number_of_words'>Number of Words</label>
+                                <input maxlength="1" type='text' class="form-control" name='number_of_words' id='number_of_words' value='<?php $number_of_words ?>'> (Max 9)
+                            </div>
+                            <div class="checkbox">
+                                <input type='checkbox' name='add_number' id='add_number' value='Yes'>
+                                <label for='add_number'>Add a number</label>
+                            </div>
+                            <div class="checkbox">
+                                <input type='checkbox' name='add_symbol' id='add_symbol' value='Yes'>
+                                <label for='add_symbol'>Add a symbol</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <input type='submit' class='btn btn-success' value='SUBMIT'>
+                    <div class='error'><?php error_message(); ?></div>
+                </form>
+                <p class='details'>
+                    <a href='http://xkcd.com/936/'>
+                        <img class='img-responsive' src='http://imgs.xkcd.com/comics/password_strength.png' alt='xkcd style passwords'>
+                    </a>
+                    <br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <footer class="footer">
+      <div class="container-fluid text-center">
+        <p class="text-muted">daisy@dynamic web application</p>
+      </div>
+    </footer>
+
 </body>
 </html>
