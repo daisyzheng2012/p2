@@ -5,7 +5,15 @@
     http://p2.jingjingzheng.me     
 
 * Description       
-  This page shows my name, photo of myself, and placeholder links for project p2,P3,P4.
+  This page is to create an xkcd style password generator.
+  Basic features includes here:
+  * on client side:
+    1.    How many words to use, with minimum number of 0, and maximum of 9.
+    1.    checkbox for whether includes a number
+    1.    checkbox for whether include a special symbol - "{}[];:,./<>?_+~!@#"
+  * On server side:
+    1. options validation 
+
 
 * Link to screencast demo      
   https://www.youtube.com/watch?v=Wg0L_RKSxhY
@@ -15,3 +23,4 @@
 
 * Outer sources(include any plugins, libraries, packages or outside code)      
   Bootstrap front-end framework: http://getbootstrap.com/
+  sample layout: http://p2.dwa15.com
