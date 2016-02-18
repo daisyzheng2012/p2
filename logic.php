@@ -19,13 +19,18 @@
 
         //words number post-checking isset
         $pattern = '/[0-9]/';
-        if (isset($_GET['number_of_words']) and preg_match($pattern, $_GET['number_of_words'])) {
-            $number_of_words = $_GET['number_of_words'];
-            $errmsg = "haha";
+        if (isset($_GET['number_of_words'])) {
+            if (preg_match($pattern, $_GET['number_of_words'])) {
+                $number_of_words = $_GET['number_of_words'];
+            }
+            else {
+                $number_of_words = 4;
+                $errmsg = "Invalid number entered. Showing a default 4 word long paragraph.";
+            }
         }
-        else{
-            $number_of_words = 4;
-            $errmsg = "Invalid number entered. Showing a default 4 word long paragraph.";
+        else {
+            //Case that the page is being loaded at first time
+            $number_of_words = 0;
         }
 
         //special character checkbox post-checking

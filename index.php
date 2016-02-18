@@ -18,6 +18,12 @@
       margin-bottom: 0;
       border-radius: 0;
     }
+    p.err {
+        color: #FA8258;
+    }
+    h2.password {
+        color: #088A08;
+    }
     </style>
 
     <?php
@@ -43,9 +49,7 @@
     </div>
     <div class="container-fluid bg-1 text-center">
         <div class="row">
-            <div class="col-md-4 col-md-offset-4">
-                <p class='password'><?php xkcd_password_generator(); ?></p>
-
+            <div class="col-md-6 col-md-offset-3">
                 <form role="form" method="get" action="index.php">
                     <div class='panel panel-primary'>
                         <div class="panel-heading">
@@ -68,8 +72,14 @@
                     </div>
 
                     <input type='submit' class='btn btn-success' value='SUBMIT'>
-                    <div class='error'><?php error_message(); ?></div>
+                    <div>
+                        <h2 class='password'><?php xkcd_password_generator(); ?></h2>
+                    </div>
+                    <div class='error'>
+                        <p class="err"><?php error_message(); ?></p>
+                    </div>
                 </form>
+                <br>
                 <p class='details'>
                     <a href='http://xkcd.com/936/'>
                         <img class='img-responsive' src='http://imgs.xkcd.com/comics/password_strength.png' alt='xkcd style passwords'>
