@@ -16,7 +16,7 @@
 
 
 * Link to screencast demo      
-  https://www.youtube.com/watch?v=Wg0L_RKSxhY
+  https://www.youtube.com/watch?v=EXFqSC9C1U0
 
 * Instruction       
   no
