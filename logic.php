@@ -73,7 +73,7 @@
         // $gen_pwd = "";
         validate_options();
         // echo $number_of_words;
-        $gen_pwd = generate_wordlist($number_of_words);
+        $gen_pwd = rtrim(generate_wordlist($number_of_words));
         if ($add_number == 1) {
             $gen_num = generate_number();
             $gen_pwd = $gen_pwd . strval($gen_num);
