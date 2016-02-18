@@ -1,4 +1,4 @@
-* Title
+* Title      
     xkcd Password Generator
 
 * Live URL      
@@ -12,7 +12,7 @@
     1.    checkbox for whether includes a number
     1.    checkbox for whether include a special symbol - "{}[];:,./<>?_+~!@#"
   * On server side:
-    1. options validation 
+    1. options validation
 
 
 * Link to screencast demo      
@@ -22,5 +22,5 @@
   no
 
 * Outer sources(include any plugins, libraries, packages or outside code)      
-  Bootstrap front-end framework: http://getbootstrap.com/
+  Bootstrap front-end framework: http://getbootstrap.com/      
   sample layout: http://p2.dwa15.com
